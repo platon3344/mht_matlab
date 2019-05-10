@@ -1,6 +1,6 @@
 % MHT_demo
-% 代码中merty算法产生最优的假设，也就是新息值最小的前（）个假设
-% prune剪枝算法，执行航迹产生和消亡。
+% 该代码中实际存在的问题是：已经确定知道只有一个航迹（nTarg = 1;），在估计假设的过程中只找一个目标
+% 但是在实际工程中，航迹的数目是不确定的，也即为充测量值中无法判断有多少个航迹。
 clc;clear;close all;
 noPlot = 0;
 load CurveOne.mat profile;
@@ -164,7 +164,7 @@ for t = 1 : nStep
             p1 = hypoSeed{2}; % log-prob of this hypoSeed
             nT = sum(hypoSeed{1} > 0); % number of targets deteced in hypoSeed
             p2 = -nT * log(1-Pd);
-            for j = 1 : M
+            for j = 1 : M%三颗树
                 hypo = cellHypoTmp{j};%遍历假设
                 asso = hypo{1};
                 

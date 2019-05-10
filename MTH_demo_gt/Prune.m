@@ -2,8 +2,7 @@
 % from cellHypo and cellTarg as well as take record of good estimations. 
 % 
 % Syntax: 
-%   [cellEstm, cellHypo, cellTarg] = ...
-%       Prune(cellHypo, cellTarg, M, N, t, LP)
+%   [cellEstm, cellHypo, cellTarg] =  Prune(cellEstm , cellHypo, cellTarg, M, N, t, LP)
 % 
 % In:
 %   cellEstm - a cell array containing the state estimation for each 
