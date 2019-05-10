@@ -1,0 +1,6 @@
+2009.05.11
+MurtyPartition.m: add an input parameter 'type' to indicate the assignment 
+problem type. type == 0 for N-to-N assignment problem, type == 1 for M-to-N
+assignment problem (M > N). It affects the number of partitions. 
+
+Murty.m: modify the call syntax to function MurtyPartition.
