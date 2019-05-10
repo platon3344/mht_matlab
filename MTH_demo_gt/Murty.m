@@ -26,7 +26,6 @@ solution{1} = {assgmt, cost};
 % xxxRec stands for 'record'
 nodeRec = cell(1, 2);
 nodeRec{1} = [1,1];
-nodeRec{2} = [1,1];
 assgmtRec = assgmt;
 
 nodeList = MurtyPartition(nodeRec, assgmtRec, 1);
@@ -55,7 +54,7 @@ while t < k
         
         if ismember(0, assgmt) % cost have to be inf
             continue;
-        elseif cost < minCost
+        elseif cost < minCost%寻找最小的代价函数值，对应的分配方法
             minCost = cost;
             nodeRec = node;
             assgmtRec = assgmt;

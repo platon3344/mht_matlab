@@ -32,8 +32,7 @@
 %   cellHypo - cellHypo after pruning
 %   cellTarg - cellTarg after pruning  
   
-function [cellEstm, cellHypo, cellTarg] = Prune...
-    (cellEstm, cellHypo, cellTarg, M, N, t, LP)
+function [cellEstm, cellHypo, cellTarg] = Prune(cellEstm, cellHypo, cellTarg, M, N, t, LP)
 
 % use the latest probabilities as the standard to judge
 head = 2;
@@ -47,8 +46,7 @@ chooseBranch = ceil(x/M^(N-1));
 idx = 1;
 chooseIdx = [];
 for i = 1 : N
-    chooseIdx = [chooseIdx, ...
-        idx+(chooseBranch-1)*M^(i-1)+1 : idx+chooseBranch*M^(i-1)];
+    chooseIdx = [chooseIdx, idx+(chooseBranch-1)*M^(i-1)+1 : idx+chooseBranch*M^(i-1)];
     idx = idx + M^i;
 end
 

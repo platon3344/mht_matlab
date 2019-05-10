@@ -26,7 +26,7 @@ function nodeList = MurtyPartition(N, a, type)
 
 nMeas = size(a, 1); 
 a = [(1:nMeas)', a]; % add a column of index
-a1 = intersect(N{1}, a, 'rows'); % entries must be included
+a1 = intersect(N{1}, a,'rows'); % entries must be included
 a2 = setdiff(a, a1, 'rows'); % interchangeable entries
 
 if type == 0 % N-to-N assignment
