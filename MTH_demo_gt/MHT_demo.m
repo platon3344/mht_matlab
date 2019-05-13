@@ -4,6 +4,7 @@
 clc;clear;close all;
 noPlot = 0;
 load CurveOne.mat profile;
+tic;
 % values of nTarg and T are determined by .mat file
 nTarg = 1;
 T = 2;
@@ -234,3 +235,4 @@ disp('    err_x     err_vx     err_y     err_vy     lose  sum');
 disp(rstMHT);
 disp(sum(errRMS));
 fprintf('MHT DONE\n\n');
+toc;

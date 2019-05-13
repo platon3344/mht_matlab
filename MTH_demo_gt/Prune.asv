@@ -63,7 +63,7 @@ for i = 1 : size(confirmedCase, 2)
     if lifePoint == 0
         continue;
     else
-        flg = find(cellfun(@(v) v{1}, cellEstm) == idx);%当前估计目标ID和存在航迹ID不同，建立新的航迹。
+        flg = find(cellfun(@(v) v{1}, cellEstm) == idx);%当前估计目标ID和存在航迹ID不同，
         if isempty(flg) % maybe a new target appears
             if lifePoint >= LP
                 newTarg = {idx, t-N+1, X};
